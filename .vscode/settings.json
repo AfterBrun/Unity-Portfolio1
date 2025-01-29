@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Dragon Flight.sln"
+    "dotnet.defaultSolution": "Unity-Portfolio1.sln"
 }
