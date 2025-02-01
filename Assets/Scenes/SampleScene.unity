@@ -731,6 +731,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559145112a957c04f888a97a01164ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyList:
+  - {fileID: 5910309344017461033, guid: 8692da0c6b0ddeb48928663b942794ee, type: 3}
+  - {fileID: 5910309344017461033, guid: 37f4af30e338aea43aa3ec01b6e131e9, type: 3}
+  - {fileID: 5910309344017461033, guid: 37e1948df04760d4a8403db080b868d6, type: 3}
+  - {fileID: 5910309344017461033, guid: 0d679acea255f2c4e90a8b56ee41b832, type: 3}
+  - {fileID: 5910309344017461033, guid: 5df9b666c3081d94cb52a5e7f4a4d26e, type: 3}
+  - {fileID: 5910309344017461033, guid: a214b624f940bfa41aa5cb35270a812e, type: 3}
+  - {fileID: 5910309344017461033, guid: f0aa2bab6ed1ddf4e96829d8d8479cac, type: 3}
+  _spawnXPoints:
+  - -2.3
+  - -1.2
+  - 0
+  - 1.2
+  - 2.3
+  _spawnRate: 1
+  _startWait: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
