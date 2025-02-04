@@ -4,9 +4,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
+    GameObject _coin;
+
+    [SerializeField]
     private float _speed = 10.0f;
     [SerializeField]
-    private int _hp = 1;
+    public int _hp = 1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,10 +31,18 @@ public class Enemy : MonoBehaviour
             Weapon weapon = other.gameObject.GetComponent<Weapon>();
             _hp -= weapon._damage;
             if(_hp <= 0) {
-                Debug.Log(_hp);
+                Instantiate(_coin, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
             Destroy(other.gameObject);
         }
+    }
+
+    public void SetHp(int hp) {
+        _hp = hp;
+    }
+
+    public void SetSpeed(float speed) {
+        _speed = speed;
     }
 }

@@ -13,7 +13,6 @@ public class EnemySpawner : MonoBehaviour
     public float _spawnRate = 0.3f;
     [SerializeField]
     private float _startWait = 3.0f;
-    private float _lastSpawnTime = 0.0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,13 +27,18 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator EnemySpawnRoutine() {
         yield return new WaitForSeconds(_startWait);
-
+        int levelCount = 0;
+        int enemyIndex = 0;
+        int enemyHp = 1;
         while(true) {
             foreach(float posX in _spawnXPoints) {
-                int index = Random.Range(0, _enemyList.Length);
-                SpawnEnemy(index, posX);
+                SpawnEnemy(enemyIndex, posX, enemyHp);
             }
-
+            levelCount++;
+            if(levelCount % 10 == 0) {
+                enemyIndex++;
+                enemyHp++;
+            }
             yield return new WaitForSeconds(_spawnRate);
         }
     }
@@ -45,9 +49,11 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
-    void SpawnEnemy(int enemyIndex, float x) 
+    void SpawnEnemy(int enemyIndex, float x, int hp) 
     {
-        Instantiate(_enemyList[enemyIndex], new Vector3(x, transform.position.y, transform.position.z), 
+        GameObject enemyObject = Instantiate(_enemyList[enemyIndex], new Vector3(x, transform.position.y, transform.position.z), 
                     Quaternion.identity);
+        Enemy enemy = enemyObject.GetComponent<Enemy>();
+        enemy.SetHp(hp);
     }
 }

@@ -41,6 +41,11 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "Enemy") {
             Destroy(gameObject);
         }
+        if(other.gameObject.tag == "Coin") {
+            Debug.Log("coin +1");
+            GameManager.instance.IncreaseCoin();
+            Destroy(other.gameObject);
+        }
     }
 
 }
