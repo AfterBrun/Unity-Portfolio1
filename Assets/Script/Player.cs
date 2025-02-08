@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _shootInterval = 0.5f;
     private float _lastShootTime = 0.0f;
+
+    [SerializeField]
+    public int _hp = 3;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,13 +43,38 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Enemy") {
-            Destroy(gameObject);
+            _hp--;
+            GameManager.instance.DecreaseHpUI();
+            if(_hp <= 0) {
+                Destroy(gameObject);
+            }
+            StartCoroutine("UnBeatTime");
         }
         if(other.gameObject.tag == "Coin") {
-            Debug.Log("coin +1");
             GameManager.instance.IncreaseCoin();
             Destroy(other.gameObject);
         }
+    }
+
+    IEnumerator UnBeatTime() {
+        GetComponent<CircleCollider2D>().enabled = false;
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        int count = 0;
+        while(count < 10)
+        {
+            if(count % 2 == 0) {
+                spriteRenderer.color = new Color32(255, 255, 255, 90); 
+            }
+            else {
+                spriteRenderer.color = new Color32(255, 255, 255, 180);
+            }
+            yield return new WaitForSeconds(0.2f);
+            count += 1;
+        }
+        spriteRenderer.color = new Color32(255, 255, 255, 255);
+        GetComponent<CircleCollider2D>().enabled = true;
+        yield return null;
     }
 
 }
