@@ -1,55 +1,22 @@
 fileFormatVersion: 2
-guid: 4ca6401e8a0a3824da3f4c73f07109e4
+guid: 45db16fa608e5c945a4aa7b4ad651750
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1212656191580834748
-    second: george_0
+      213: -4360530552843628718
+    second: ship_0
   - first:
-      213: -446080272761505808
-    second: george_1
+      213: 7165950743707284623
+    second: ship_1
   - first:
-      213: 7364557105161655394
-    second: george_2
+      213: -3352868958805856340
+    second: ship_2
   - first:
-      213: 2834835260839429080
-    second: george_3
+      213: -4506795734596175823
+    second: ship_3
   - first:
-      213: -4176668720435019896
-    second: george_4
-  - first:
-      213: -3507609111476023911
-    second: george_5
-  - first:
-      213: 217811228207917067
-    second: george_6
-  - first:
-      213: -1580005331218028238
-    second: george_7
-  - first:
-      213: -3613987320800232396
-    second: george_8
-  - first:
-      213: 7995988539013619322
-    second: george_9
-  - first:
-      213: -4672802000885893232
-    second: george_10
-  - first:
-      213: 5024841952986704283
-    second: george_11
-  - first:
-      213: -5947782098575674738
-    second: george_12
-  - first:
-      213: 5048597124267302775
-    second: george_13
-  - first:
-      213: 7595347947741795711
-    second: george_14
-  - first:
-      213: 7374616585114685731
-    second: george_15
+      213: -2202765497068720075
+    second: ship_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -171,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: george_0
+      name: ship_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 149
-        width: 31
-        height: 33
+        x: 1
+        y: 24
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbb8add916834d010800000000000000
-      internalID: 1212656191580834748
+      spriteID: 25f8485b0984c73c0800000000000000
+      internalID: -4360530552843628718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_1
+      name: ship_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 148
-        width: 30
-        height: 34
+        x: 1
+        y: 0
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f7bdb8fa543fc9f0800000000000000
-      internalID: -446080272761505808
+      spriteID: f847e9c0c32927360800000000000000
+      internalID: 7165950743707284623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_2
+      name: ship_2
       rect:
         serializedVersion: 2
-        x: 105
-        y: 149
-        width: 31
-        height: 33
+        x: 17
+        y: 24
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2645d350ba9243660800000000000000
-      internalID: 7364557105161655394
+      spriteID: caf61fb32773871d0800000000000000
+      internalID: -3352868958805856340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_3
+      name: ship_3
       rect:
         serializedVersion: 2
-        x: 154
-        y: 148
-        width: 30
-        height: 34
+        x: 17
+        y: 0
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d3061f66ab575720800000000000000
-      internalID: 2834835260839429080
+      spriteID: 138362c4825a471c0800000000000000
+      internalID: -4506795734596175823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_4
+      name: ship_4
       rect:
         serializedVersion: 2
-        x: 9
-        y: 100
-        width: 31
-        height: 34
+        x: 32
+        y: 24
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,250 +241,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88f3cfd7ded7906c0800000000000000
-      internalID: -4176668720435019896
+      spriteID: 5307bbf73743e61e0800000000000000
+      internalID: -2202765497068720075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_5
+      name: ship_5
       rect:
         serializedVersion: 2
-        x: 55
-        y: 100
-        width: 30
-        height: 34
+        x: 32
+        y: 0
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 99d4c83e818725fc0800000000000000
-      internalID: -3507609111476023911
+      spriteID: 2b19f4e30d700d740ab3ebe08359f188
+      internalID: -590997966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_6
+      name: ship_6
       rect:
         serializedVersion: 2
-        x: 105
-        y: 100
-        width: 31
-        height: 34
+        x: 49
+        y: 24
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b08ac657822d50300800000000000000
-      internalID: 217811228207917067
+      spriteID: 1f7aa3eb1ec6691458584ff9071f0cae
+      internalID: 267961317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_7
+      name: ship_7
       rect:
         serializedVersion: 2
-        x: 154
-        y: 100
-        width: 30
-        height: 34
+        x: 49
+        y: 0
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 239a681c581b21ae0800000000000000
-      internalID: -1580005331218028238
+      spriteID: 3bd1ed4ca452af444a5053b1eb9ff81f
+      internalID: 1007473991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_8
+      name: ship_8
       rect:
         serializedVersion: 2
-        x: 9
-        y: 53
-        width: 31
-        height: 33
+        x: 65
+        y: 24
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 43cbfe0fda988ddc0800000000000000
-      internalID: -3613987320800232396
+      spriteID: 1cc4272a7e7e98241a846e176a3a24a2
+      internalID: 453002241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_9
+      name: ship_9
       rect:
         serializedVersion: 2
-        x: 55
-        y: 52
-        width: 30
-        height: 34
+        x: 65
+        y: 0
+        width: 14
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a7e5000363577fe60800000000000000
-      internalID: 7995988539013619322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_10
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 53
-        width: 31
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0973677765fd62fb0800000000000000
-      internalID: -4672802000885893232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_11
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 52
-        width: 30
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b99a04c2223dbb540800000000000000
-      internalID: 5024841952986704283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_12
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 4
-        width: 31
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e8238fca1bb357da0800000000000000
-      internalID: -5947782098575674738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_13
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 4
-        width: 30
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 77fd20ef558301640800000000000000
-      internalID: 5048597124267302775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_14
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 4
-        width: 31
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7554a277b8186960800000000000000
-      internalID: 7595347947741795711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_15
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 4
-        width: 30
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 321177636b6e75660800000000000000
-      internalID: 7374616585114685731
+      spriteID: 78938138977027c4f955d55ddf569cf8
+      internalID: 1217931420
       vertices: []
       indices: 
       edges: []
@@ -526,7 +361,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ae9e8ba9d89cb754d8589f71cb191a27
     internalID: 0
     vertices: []
     indices: 
@@ -535,7 +370,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ship_0: -4360530552843628718
+      ship_1: 7165950743707284623
+      ship_2: -3352868958805856340
+      ship_3: -4506795734596175823
+      ship_4: -2202765497068720075
+      ship_5: -590997966
+      ship_6: 267961317
+      ship_7: 1007473991
+      ship_8: 453002241
+      ship_9: 1217931420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

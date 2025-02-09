@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 131323596}
   - component: {fileID: 131323598}
   m_Layer: 0
-  m_Name: George
+  m_Name: SpaceShip
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ Animator:
   m_GameObject: {fileID: 131323592}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: beca8496effd7b04fb24695b1f1edc65, type: 2}
+  m_Controller: {fileID: 9100000, guid: f0a2a2d01b6d9f04a81f542c1a3d2a99, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7364557105161655394, guid: 4ca6401e8a0a3824da3f4c73f07109e4, type: 3}
+  m_Sprite: {fileID: -2202765497068720075, guid: 45db16fa608e5c945a4aa7b4ad651750, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -227,7 +227,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.04, z: 0}
-  m_LocalScale: {x: 2.3351958, y: 2.3351958, z: 2.3351958}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1633739252}
@@ -311,6 +311,7 @@ MonoBehaviour:
   _shootPoint: {fileID: 1633739252}
   _missile: {fileID: 958768680516952196, guid: 256415f8eee9c2b4aa16b6180cd8022d, type: 3}
   _shootInterval: 0.5
+  _speed: 5
   _hp: 3
 --- !u!1 &307161095
 GameObject:
@@ -423,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304e400f34307c64a9ac0c8ce2784713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.1
   meshRenderer: {fileID: 319146107}
 --- !u!64 &319146106
 MeshCollider:
@@ -470,7 +471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3b98014bfa34d634286d7d33287ac62b, type: 2}
+  - {fileID: 2100000, guid: cd3864cf80819ca438f0bb6dd59099bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
