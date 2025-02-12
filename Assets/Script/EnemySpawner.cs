@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics;
 using NUnit.Framework;
 using NUnit.Framework.Internal.Execution;
 using UnityEngine;
@@ -55,5 +56,9 @@ public class EnemySpawner : MonoBehaviour
                     Quaternion.identity);
         Enemy enemy = enemyObject.GetComponent<Enemy>();
         enemy.SetHp(hp);
+    }
+
+    public void StopSpawn() {
+        StopCoroutine("EnemySpawnRoutine");
     }
 }
