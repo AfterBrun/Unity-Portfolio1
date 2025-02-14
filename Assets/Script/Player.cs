@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private Transform _shootPoint;
     [SerializeField]
     private GameObject _missile;
+
     [SerializeField]
     private float _shootInterval = 0.5f;
     private float _lastShootTime = 0.0f;
@@ -82,6 +83,18 @@ public class Player : MonoBehaviour
             }
             StartCoroutine("UnBeatTime");
         }
+
+        if(other.gameObject.tag == "EnemyMissile") {
+            _hp--;
+            GameManager.instance.DecreaseHpUI();
+            if(_hp <= 0) {
+                GameManager.instance.SetGameOver();
+                Destroy(gameObject);
+            }
+            StartCoroutine("UnBeatTime");
+        }
+
+
         if(other.gameObject.tag == "Coin") {
             GameManager.instance.IncreaseCoin();
             Destroy(other.gameObject);

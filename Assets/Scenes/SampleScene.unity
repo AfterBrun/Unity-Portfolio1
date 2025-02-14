@@ -1418,13 +1418,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyList:
   - {fileID: 3540645116753052639, guid: 96b0803cb0cce374b9ef5bb5751a9c0e, type: 3}
+  - {fileID: 2025366516671319042, guid: da34bc530b60109459dba7cd33d5ebca, type: 3}
   _spawnXPoints:
   - -2.3
   - -1.2
   - 0
   - 1.2
   - 2.3
-  _spawnRate: 1
+  _spawnRate: 2
   _startWait: 2
 --- !u!1 &1897880422
 GameObject:

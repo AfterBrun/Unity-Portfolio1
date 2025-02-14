@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Diagnostics;
+//using System.Diagnostics;
 using NUnit.Framework;
 using NUnit.Framework.Internal.Execution;
 using UnityEngine;
@@ -11,10 +11,30 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float[] _spawnXPoints = {-2.3f, -1.2f, 0.0f, 1.2f, 2.3f};
     [SerializeField]
-    public float _spawnRate = 0.3f;
+    public float _spawnRate = 1.0f;
     [SerializeField]
     private float _startWait = 3.0f;
+    private int[,] stage1 = new int[,] {{1, 0, 0, 0, 0}, 
+                                        {0, 0, 1, 0, 0},
+                                        {0, 1, 0, 1, 0},
+                                        {1, 0, 0, 1, 0},
+                                        {1, 0, 1, 0, 1},
+                                        {1, 1, 1, 0, 0},
+                                        {0, 1, 0, 0, 1},
+                                        {1, 1, 1, 1, 1},
+                                        {0, 1, 1, 1, 1},
+                                        {1, 1, 0, 1, 1}};
 
+    private int[,] stage2 = new int[,] {{0, 1, 0, 2, 0}, 
+                                        {1, 1, 0, 0, 1},
+                                        {1, 0, 1, 0, 2},
+                                        {0, 1, 0, 0, 0},
+                                        {2, 0, 1, 0, 2},
+                                        {0, 1, 1, 0, 0},
+                                        {0, 0, 2, 1, 0},
+                                        {0, 1, 1, 0, 1},
+                                        {0, 2, 0, 0, 0},
+                                        {2, 1, 1, 1, 2}};
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,22 +43,31 @@ public class EnemySpawner : MonoBehaviour
     }
 
     void StartEnemySpawnRoutine() {
-        StartCoroutine("EnemySpawnRoutine");
+        StartCoroutine("FirstPhase");
     }
 
-    IEnumerator EnemySpawnRoutine() {
+    IEnumerator FirstPhase() {
         yield return new WaitForSeconds(_startWait);
-        int levelCount = 0;
-        int enemyIndex = 0;
-        int enemyHp = 1;
-        while(true) {
-            foreach(float posX in _spawnXPoints) {
-                SpawnEnemy(enemyIndex, posX, enemyHp);
+        for (int i = 0; i < stage1.GetLength(0); i++) {
+            for (int j = 0; j < stage1.GetLength(1); j++) {
+                if(stage1[i, j] <= 0) continue;
+                else {
+                    SpawnEnemy(stage1[i, j] - 1, _spawnXPoints[j]);
+                }
             }
-            levelCount++;
-            if(levelCount % 10 == 0) {
-                enemyIndex++;
-                enemyHp++;
+            yield return new WaitForSeconds(_spawnRate);
+        }
+        yield return StartCoroutine("SecondPhase");
+    }
+
+    IEnumerator SecondPhase() {
+        yield return new WaitForSeconds(_startWait);
+        for (int i = 0; i < stage2.GetLength(0); i++) {
+            for (int j = 0; j < stage2.GetLength(1); j++) {
+                if(stage2[i, j] <= 0) continue;
+                else {
+                    SpawnEnemy(stage2[i, j] - 1, _spawnXPoints[j]);
+                }
             }
             yield return new WaitForSeconds(_spawnRate);
         }
@@ -50,15 +79,18 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
-    void SpawnEnemy(int enemyIndex, float x, int hp) 
+    void SpawnEnemy(int enemyIndex, float x) 
     {
         GameObject enemyObject = Instantiate(_enemyList[enemyIndex], new Vector3(x, transform.position.y, transform.position.z), 
                     Quaternion.identity);
-        Enemy enemy = enemyObject.GetComponent<Enemy>();
-        enemy.SetHp(hp);
+        Fighter fighter;
+        if(fighter = enemyObject.GetComponent<Fighter>()) {
+            float down = Random.Range(0f, 4f);
+            fighter.SetDownPoint(down);
+        }
     }
 
     public void StopSpawn() {
-        StopCoroutine("EnemySpawnRoutine");
+        StopAllCoroutines();
     }
 }
