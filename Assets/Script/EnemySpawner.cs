@@ -8,6 +8,11 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] _enemyList;
+
+    [SerializeField]
+    private GameObject _boss;
+
+
     [SerializeField]
     private float[] _spawnXPoints = {-2.3f, -1.2f, 0.0f, 1.2f, 2.3f};
     [SerializeField]
@@ -71,6 +76,12 @@ public class EnemySpawner : MonoBehaviour
             }
             yield return new WaitForSeconds(_spawnRate);
         }
+        yield return StartCoroutine("BossBattle");
+    }
+
+    IEnumerator BossBattle() {
+        yield return new WaitForSeconds(_startWait);
+        Instantiate(_boss, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
     }
 
     // Update is called once per frame

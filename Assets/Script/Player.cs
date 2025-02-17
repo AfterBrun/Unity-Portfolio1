@@ -89,6 +89,7 @@ public class Player : MonoBehaviour
             GameManager.instance.DecreaseHpUI();
             if(_hp <= 0) {
                 GameManager.instance.SetGameOver();
+                GameManager.instance.HideBossHP();
                 Destroy(gameObject);
             }
             StartCoroutine("UnBeatTime");

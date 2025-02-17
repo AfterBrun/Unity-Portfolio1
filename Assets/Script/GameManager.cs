@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private RectTransform _hp;
+
+    [SerializeField]
+    private GameObject _bossHP;
     private float _hpUIWidth;
 
     private int _coin = 0;
@@ -53,5 +56,19 @@ public class GameManager : MonoBehaviour
     
     public void PlayAgain() {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void ShowBossHP(int hp) {
+        _bossHP.SetActive(true);
+        _bossHP.GetComponent<BossHP>().BossHPStart(hp);
+        
+    }
+
+    public void DecreaseBossHP(int damage) {
+        _bossHP.GetComponent<BossHP>().DecreaseBossHP(damage);
+    }
+
+    public void HideBossHP() {
+        _bossHP.SetActive(false);
     }
 }

@@ -13,7 +13,7 @@ public class Fighter : MonoBehaviour
     private Transform _shootPoint;
     private float _downPoint;
     [SerializeField]
-    public int _hp = 10;
+    public int _hp = 2;
     [SerializeField]
     private float _speed = 1f;
     private float _currentPosition;
