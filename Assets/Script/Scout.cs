@@ -35,6 +35,7 @@ public class Scout : MonoBehaviour
             _hp -= weapon._damage;
             if(_hp <= 0) {
                 GetComponent<CircleCollider2D>().enabled = false;
+                Debug.Log("unique enemy destroyed");
                 Instantiate(_coin, transform.position, Quaternion.identity);
                 _animator.SetTrigger("IsDie");
             }

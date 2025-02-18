@@ -455,7 +455,7 @@ MonoBehaviour:
   _coin: {fileID: 4591284491206123847, guid: 418a44a2dcdf29b46a2833b6ad969089, type: 3}
   _missile: {fileID: 3448747033563228764, guid: 7c4a33b7e1011c8468e50a2621f99bb9, type: 3}
   _shootPoint: {fileID: 6813380467250567234}
-  _hp: 10
+  _hp: 50
   _speed: 2
   _rewardCount: 5
   _shootInterval: 0.5

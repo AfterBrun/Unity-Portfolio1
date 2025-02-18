@@ -33,11 +33,11 @@ public class EnemySpawner : MonoBehaviour
     private int[,] stage2 = new int[,] {{0, 1, 0, 2, 0}, 
                                         {1, 1, 0, 0, 1},
                                         {1, 0, 1, 0, 2},
-                                        {0, 1, 0, 0, 0},
+                                        {0, 1, 0, 3, 0},
                                         {2, 0, 1, 0, 2},
                                         {0, 1, 1, 0, 0},
                                         {0, 0, 2, 1, 0},
-                                        {0, 1, 1, 0, 1},
+                                        {0, 1, 1, 0, 3},
                                         {0, 2, 0, 0, 0},
                                         {2, 1, 1, 1, 2}};
 
@@ -95,10 +95,16 @@ public class EnemySpawner : MonoBehaviour
         GameObject enemyObject = Instantiate(_enemyList[enemyIndex], new Vector3(x, transform.position.y, transform.position.z), 
                     Quaternion.identity);
         Fighter fighter;
+        UniqueShip uniqueShip;
         if(fighter = enemyObject.GetComponent<Fighter>()) {
             float down = Random.Range(0f, 4f);
             fighter.SetDownPoint(down);
         }
+        else if(uniqueShip = enemyObject.GetComponent<UniqueShip>()) {
+            float down = Random.Range(0f, 4f);
+            uniqueShip.SetDownPoint(down);
+        }
+
     }
 
     public void StopSpawn() {

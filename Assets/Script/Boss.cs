@@ -1,5 +1,4 @@
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;  
 
 public class Boss : MonoBehaviour
@@ -132,5 +131,6 @@ public class Boss : MonoBehaviour
     public void DestroyEnemy() {
         Destroy(gameObject);
         GameManager.instance.HideBossHP();
+        GameManager.instance.SetYouWin();
     }
 }

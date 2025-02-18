@@ -1,6 +1,5 @@
 using System.Collections;
 using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -98,6 +97,11 @@ public class Player : MonoBehaviour
 
         if(other.gameObject.tag == "Coin") {
             GameManager.instance.IncreaseCoin();
+            Destroy(other.gameObject);
+        }
+
+        if(other.gameObject.tag == "Upgrade") {
+            _shootInterval /= 2;
             Destroy(other.gameObject);
         }
     }

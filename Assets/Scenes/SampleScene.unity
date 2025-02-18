@@ -1219,6 +1219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: {fileID: 829851176}
+  _gameoverText: {fileID: 1978379469}
   _gameOverPanel: {fileID: 2051561277}
   _hp: {fileID: 1897880423}
   _bossHP: {fileID: 720422978}
@@ -1584,6 +1585,7 @@ MonoBehaviour:
   _enemyList:
   - {fileID: 3540645116753052639, guid: 96b0803cb0cce374b9ef5bb5751a9c0e, type: 3}
   - {fileID: 2025366516671319042, guid: da34bc530b60109459dba7cd33d5ebca, type: 3}
+  - {fileID: 8315678479118109472, guid: 174918bcc7c1ca140880023a06de6f1f, type: 3}
   _boss: {fileID: 9075130665961748702, guid: 2d180184e85e6a942a7bd5101b654f1c, type: 3}
   _spawnXPoints:
   - -2.3

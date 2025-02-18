@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI _score;
 
     [SerializeField]
+    private TextMeshProUGUI _gameoverText;
+
+    [SerializeField]
     private GameObject _gameOverPanel;
 
     [SerializeField]
@@ -25,6 +28,12 @@ public class GameManager : MonoBehaviour
         if(instance == null) {
             instance = this;
             _hpUIWidth = _hp.sizeDelta.x;
+        }
+    }
+
+    private void Update() {
+        if(Input.GetKey(KeyCode.Escape)) {
+            Application.Quit();
         }
     }
 
@@ -50,10 +59,19 @@ public class GameManager : MonoBehaviour
         Invoke("ShowGameOverScreen", 1f);
     }
 
+    public void SetYouWin() {
+        Invoke("ShowYouWin", 1f);
+    }
+
     void ShowGameOverScreen() {
         _gameOverPanel.SetActive(true);
     }
     
+    void ShowYouWin() {
+        _gameOverPanel.SetActive(true);
+        _gameoverText.text = "You Win!";
+    }
+
     public void PlayAgain() {
         SceneManager.LoadScene("SampleScene");
     }
